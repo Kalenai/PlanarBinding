@@ -1,7 +1,10 @@
 package com.kalenai.planarbinding;
 
+import com.kalenai.planarbinding.client.handler.KeyInputEventHandler;
 import com.kalenai.planarbinding.handler.ConfigurationHandler;
+import com.kalenai.planarbinding.init.ModBlocks;
 import com.kalenai.planarbinding.init.ModItems;
+import com.kalenai.planarbinding.init.Recipes;
 import com.kalenai.planarbinding.proxy.IProxy;
 import com.kalenai.planarbinding.reference.Reference;
 import com.kalenai.planarbinding.utility.LogHelper;
@@ -26,13 +29,21 @@ public class PlanarBinding {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        proxy.registerKeybindings();
+
         ModItems.init();
+
+        ModBlocks.init();
 
         LogHelper.info("Pre Initialization Complete!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
+        Recipes.init();
+
         LogHelper.info("Initialization Complete!");
     }
 

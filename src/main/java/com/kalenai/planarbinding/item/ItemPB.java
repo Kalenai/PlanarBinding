@@ -1,5 +1,6 @@
 package com.kalenai.planarbinding.item;
 
+import com.kalenai.planarbinding.creativetab.CreativeTabPB;
 import com.kalenai.planarbinding.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -9,7 +10,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemPB extends Item {
     public ItemPB(){
-        
+        super();
+        this.setCreativeTab(CreativeTabPB.PB_TAB);
     }
 
     @Override

@@ -1,1 +1,18 @@
+#Keys
+keys.planarbinding.category=Planar Binding
+keys.planarbinding.charge=Charge
+keys.planarbinding.release=Release
+
+# Items
+item.planarbinding:salt.name=Salt
 item.planarbinding:purifiedSalt.name=Purified Salt
+item.planarbinding:inscriptionTools.name=Inscription Tools
+item.planarbinding:inscribedStone.name=Inscribed Stone
+
+# Blocks
+tile.planarbinding:sanctifiedStone.name=Sanctified Stone
+tile.planarbinding:runicStone.name=Runic Stone
+tile.planarbinding:bindingTable.name=Binding Table
+
+# Creative Tabs
+itemGroup.planarbinding=Planar Binding
